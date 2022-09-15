@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #161616;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 1.2em;
+}
+body header {
+  max-width: 90%;
+  margin: auto;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+body header span {
+  color: #13a313;
+}
+body header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+body header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 12px;
+  padding: 12px 24px;
+  position: relative;
+  transition: all 0.3s;
+}
+body header nav a:visited {
+  color: #fff;
+}
+body header nav a:hover {
+  color: #13a313;
+}/*# sourceMappingURL=index.css.map */

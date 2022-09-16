@@ -5,19 +5,20 @@
 body {
     background-color: #161616;
     font-family: Consolas, 'Courier New', monospace;
-    font-size: 1.2em;
+    max-width: 90%;
+    margin: auto;
+    color: #fff;
 
     header {
-        max-width: 90%;
-        margin: auto;
         height: 85px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         color: #fff;
+        font-size: 1.2em;
 
         span {
-            color: #13a313
+            color: #13a313;
         }
 
         nav {
@@ -39,6 +40,22 @@ body {
 
                 &:hover {
                     color: #13a313;
+                }
+            }
+        }
+    }
+
+    main {
+        .home {
+            font-size: 1.2em;
+
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 24px;
+
+                span {
+                    color: #13a313;
+                    text-transform: uppercase;
                 }
             }
         }

@@ -5,16 +5,17 @@
 body {
   background-color: #161616;
   font-family: Consolas, "Courier New", monospace;
-  font-size: 1.2em;
-}
-body header {
   max-width: 90%;
   margin: auto;
+  color: #fff;
+}
+body header {
   height: 85px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
+  font-size: 1.2em;
 }
 body header span {
   color: #13a313;
@@ -37,4 +38,15 @@ body header nav a:visited {
 }
 body header nav a:hover {
   color: #13a313;
+}
+body main .home {
+  font-size: 1.2em;
+}
+body main .home h1 {
+  font-size: 1.8em;
+  margin-bottom: 24px;
+}
+body main .home h1 span {
+  color: #13a313;
+  text-transform: uppercase;
 }/*# sourceMappingURL=index.css.map */

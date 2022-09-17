@@ -6,8 +6,6 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-family);
-  max-width: 90%;
-  margin: auto;
 }
 body header {
   height: 85px;
@@ -81,16 +79,16 @@ body main .home__subtitle p {
   font-weight: 300;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
-body main .home__subtitle p:before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--red-color);
-  margin-right: 8px;
+body main .skills .technical-skills {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 48px 0;
 }
-body main .skills p:nth-child(odd) {
-  font-family: var(--font-family-title);
+body main .skills .soft-skills {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }/*# sourceMappingURL=index.css.map */

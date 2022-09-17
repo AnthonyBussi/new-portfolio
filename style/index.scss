@@ -6,8 +6,6 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-family);
-    max-width: 90%;
-    margin: auto;
 
     header {
         height: 85px;
@@ -97,24 +95,34 @@ body {
                     font-weight: 300;
                     display: flex;
                     align-items: center;
+                    justify-content: flex-end;
     
-                    &:before {
-                        content: "";
-                        display: inline-block;
-                        width: 16px;
-                        height: 16px;
-                        border-radius: 50%;
-                        background: var(--red-color);
-                        margin-right: 8px;
-                    }
+                    // &:before {
+                    //     content: "";
+                    //     display: inline-block;
+                    //     width: 16px;
+                    //     height: 16px;
+                    //     border-radius: 50%;
+                    //     background: var(--text-color);
+                    //     margin-right: 8px;
+                    // }
                 }
             }
         }
 
         .skills {
 
-            p:nth-child(odd) {
-                font-family: var(--font-family-title);
+            .technical-skills{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                margin: 48px 0;
+            }
+
+            .soft-skills {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
             }
         }
     }

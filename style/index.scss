@@ -4,10 +4,10 @@
 
 body {
     background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: var(--font-family);
     max-width: 90%;
     margin: auto;
-    // color: #fff;
 
     header {
         height: 85px;
@@ -28,14 +28,31 @@ body {
             justify-content: space-around;
             height: 85px;
 
+            .link-container {
+                margin: 12px;
+                padding: 12px 24px;
+            }
+
             a {
                 color: var(--text-color);
                 font-weight: 700;
                 text-decoration: none;
-                margin: 12px;
-                padding: 12px 24px;
+                border-bottom: 2px solid transparent;
+                padding-bottom: 3px;
                 position: relative;
                 transition: all .3s;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 0px;
+                    width: 0%;
+                    left: 0px;
+                    height: 2px;
+                    transition: width ease .3s;
+                    background: var(--red-color);                    
+                }
 
                 &:visited {
                     color: var(--text-color);
@@ -43,6 +60,10 @@ body {
 
                 &:hover {
                     color: var(--red-color);
+                    
+                    &::after {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -50,14 +71,15 @@ body {
 
     main {
         .home {
-            height: calc(100vh - 85px);
+            // height: calc(100vh - 85px);
+            padding: 72px 0;
             display: flex;
             align-items: center;
             justify-content: space-around;
 
             &__title {
                 h1 {
-                    font-weight: 300;
+                    font-weight: 400;
                     margin-bottom: 24px;
                     font-size: 7em;
     
@@ -72,23 +94,21 @@ body {
             &__subtitle {
                 p {
                     font-size: 4em;
-                    font-weight: 400;
+                    font-weight: 300;
+                    display: flex;
+                    align-items: center;
     
                     &:before {
                         content: "";
+                        display: inline-block;
                         width: 16px;
                         height: 16px;
                         border-radius: 50%;
                         background: var(--red-color);
+                        margin-right: 8px;
                     }
                 }
             }
-
-            // .toto {
-            //     width: 200px;
-            //     height: 500px;
-            //     background-color: var(--text-color);
-            // }
         }
 
         .skills {

@@ -4,6 +4,7 @@
 
 body {
   background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: var(--font-family);
   max-width: 90%;
   margin: auto;
@@ -26,14 +27,29 @@ body header nav {
   justify-content: space-around;
   height: 85px;
 }
+body header nav .link-container {
+  margin: 12px;
+  padding: 12px 24px;
+}
 body header nav a {
   color: var(--text-color);
   font-weight: 700;
   text-decoration: none;
-  margin: 12px;
-  padding: 12px 24px;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
   position: relative;
   transition: all 0.3s;
+}
+body header nav a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  width: 0%;
+  left: 0px;
+  height: 2px;
+  transition: width ease 0.3s;
+  background: var(--red-color);
 }
 body header nav a:visited {
   color: var(--text-color);
@@ -41,14 +57,17 @@ body header nav a:visited {
 body header nav a:hover {
   color: var(--red-color);
 }
+body header nav a:hover::after {
+  width: 100%;
+}
 body main .home {
-  height: calc(100vh - 85px);
+  padding: 72px 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 body main .home__title h1 {
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 24px;
   font-size: 7em;
 }
@@ -59,14 +78,18 @@ body main .home__title h1 span {
 }
 body main .home__subtitle p {
   font-size: 4em;
-  font-weight: 400;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
 }
 body main .home__subtitle p:before {
   content: "";
+  display: inline-block;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: var(--red-color);
+  margin-right: 8px;
 }
 body main .skills p:nth-child(odd) {
   font-family: var(--font-family-title);

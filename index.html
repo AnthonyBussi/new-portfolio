@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anthony Bussi - Portfolio</title>
     <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/variables.css">
     <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
     <header>
-        <span>&lsaquo;Anthony Bussi/&rsaquo;</span>
+        <span>Anthony Bussi</span>
         <nav>
             <a href="#home">Accueil</a>
             <a href="#">Compétences</a>
@@ -21,11 +22,21 @@
     </header>
     <main>
         <section id="home" class="home">
-            <h1>Anthony <span>Bussi</span></h1>
-            <p>Intégrateur web</p>
-            <p>Développeur front-end</p>
+            <div class="home__text">
+                <div class="home__title">
+                    <h1>Anthony <span>Bussi</span></h1>
+                </div>
+                <div class="home__subtitle">
+                    <p>Intégrateur web</p>
+                    <p>Développeur front-end</p>
+                </div>
+            </div>
+            <div class="home__picture">
+                <img src="http://via.placeholder.com/400x600" alt="Image à remplacer">
+            </div>
+            <div class="toto"></div>
         </section>
-        <div id="skills" class="skills">
+        <section id="skills" class="skills">
             <p>HTML5</p>
             <p>CSS3</p>
             <p>Bootstrap</p>
@@ -33,7 +44,7 @@
             <p>jQuery</p>
             <p>ReactJS</p>
             <p>Git</p>
-        </div>
+        </section>
     </main>
     <footer>
         

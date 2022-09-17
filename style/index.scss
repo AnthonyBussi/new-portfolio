@@ -3,11 +3,11 @@
 }
 
 body {
-    background-color: #161616;
-    font-family: Consolas, 'Courier New', monospace;
+    background-color: var(--bg-color);
+    font-family: var(--font-family);
     max-width: 90%;
     margin: auto;
-    color: #fff;
+    // color: #fff;
 
     header {
         height: 85px;
@@ -15,19 +15,22 @@ body {
         justify-content: space-between;
         align-items: center;
         color: #fff;
-        font-size: 1.2em;
 
         span {
-            color: #13a313;
+            color: var(--red-color);
+            font-weight: 700;
+            font-size: 1.2em;
         }
 
         nav {
             display: flex;
             align-items: center;
             justify-content: space-around;
+            height: 85px;
 
             a {
-                color: #fff;
+                color: var(--text-color);
+                font-weight: 700;
                 text-decoration: none;
                 margin: 12px;
                 padding: 12px 24px;
@@ -35,11 +38,11 @@ body {
                 transition: all .3s;
 
                 &:visited {
-                    color: #fff;
+                    color: var(--text-color);
                 }
 
                 &:hover {
-                    color: #13a313;
+                    color: var(--red-color);
                 }
             }
         }
@@ -47,16 +50,52 @@ body {
 
     main {
         .home {
-            font-size: 1.2em;
+            height: calc(100vh - 85px);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
 
-            h1 {
-                font-size: 1.8em;
-                margin-bottom: 24px;
-
-                span {
-                    color: #13a313;
-                    text-transform: uppercase;
+            &__title {
+                h1 {
+                    font-weight: 300;
+                    margin-bottom: 24px;
+                    font-size: 7em;
+    
+                    span {
+                        color: var(--red-color);
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
                 }
+            }
+
+            &__subtitle {
+                p {
+                    font-size: 4em;
+                    font-weight: 400;
+    
+                    &:before {
+                        content: "";
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        background: var(--red-color);
+                    }
+                }
+            }
+
+            // .toto {
+            //     width: 200px;
+            //     height: 500px;
+            //     background-color: var(--text-color);
+            // }
+        }
+
+        .skills {
+            // display: none;
+
+            p:nth-child(odd) {
+                font-family: var(--font-family-title);
             }
         }
     }

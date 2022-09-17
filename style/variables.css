@@ -7,3 +7,8 @@
     --red-color: #BE2623;
     --font-family: 'Montserrat', sans-serif;
 }
+
+h2 {
+    font-size: 1.5em;
+    color: var(--red-color);
+}

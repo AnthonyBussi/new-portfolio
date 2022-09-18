@@ -53,6 +53,7 @@ h2 {
   font-size: 1.6em;
   color: var(--red-color);
   position: relative;
+  margin: 48px 0;
 }
 h2::before {
   content: "";

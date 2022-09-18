@@ -81,14 +81,68 @@ body main .home__subtitle p {
   font-size: 4em;
   font-weight: 300;
 }
-body main .skills .technical-skills {
+body main .skills__technical-skills {
   width: 100%;
   display: flex;
   justify-content: space-around;
   margin: 48px 0;
 }
-body main .skills .soft-skills {
+body main .skills__soft-skills {
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+body main .contact h3 {
+  text-align: center;
+  margin-bottom: 48px;
+}
+body main .contact__informations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .contact__informations a {
+  text-decoration: none;
+  color: var(--text-color);
+  margin-bottom: 24px;
+}
+body main .contact__network {
+  display: flex;
+  justify-content: space-around;
+}
+body main .contact__network .link {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  text-decoration: none;
+}
+body main .contact__network .link .social_network {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  padding: 25px;
+  border: 0;
+  position: relative;
+  transition: all 0.2s;
+}
+body main .contact__network .link .social_network i {
+  font-size: 2em;
+}
+body main .contact__network .link .social_network::before, body main .contact__network .link .social_network::after {
+  border: 2px solid var(--text-color);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  bottom: 0px;
+  transition: all 0.2s;
+}
+body main .contact__network .link .social_network:hover::before {
+  transform: translate(8px, 8px);
+}
+body main .contact__network .link .social_network:hover::after {
+  transform: translate(-8px, -8px);
 }/*# sourceMappingURL=index.css.map */

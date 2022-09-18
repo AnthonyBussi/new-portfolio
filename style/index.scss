@@ -100,17 +100,87 @@ body {
 
         .skills {
 
-            .technical-skills{
+            &__technical-skills{
                 width: 100%;
                 display: flex;
                 justify-content: space-around;
                 margin: 48px 0;
             }
 
-            .soft-skills {
+            &__soft-skills {
                 width: 100%;
                 display: flex;
                 justify-content: space-around;
+            }
+        }
+
+        .projects {
+
+        }
+
+        .contact {
+            h3 {
+                text-align: center;
+                margin-bottom: 48px;
+            }
+            &__informations {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                a {
+                    text-decoration: none;
+                    color: var(--text-color);
+                    margin-bottom: 24px;
+                }
+            }
+            &__network {
+                display: flex;
+                justify-content: space-around;
+
+                .link {
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: var(--text-color);
+                    text-decoration: none;
+                    
+                    .social_network {
+                        width: 110px;
+                        height: 110px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin: 15px;
+                        padding: 25px;
+                        border: 0;
+                        position: relative;
+                        transition: all 0.2s;
+                
+                        i {
+                            font-size: 2em;
+                        }
+                
+                        &::before, &::after {
+                            border: 2px solid var(--text-color);
+                            content:"";
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 0px;
+                            bottom: 0px;
+                            transition: all .2s;
+                        }
+                    
+                        &:hover {
+                            &::before {
+                                transform: translate(8px, 8px);
+                            }
+                    
+                            &::after {
+                                transform: translate(-8px, -8px);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

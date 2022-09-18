@@ -74,12 +74,12 @@ body main .home__title h1 span {
   text-transform: uppercase;
   font-weight: 700;
 }
+body main .home__subtitle {
+  text-align: end;
+}
 body main .home__subtitle p {
   font-size: 4em;
   font-weight: 300;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
 }
 body main .skills .technical-skills {
   width: 100%;

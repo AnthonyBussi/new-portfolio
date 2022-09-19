@@ -154,6 +154,9 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
+                padding: 48px 24px;
+                background-color: var(--bg-color);
+                transition: background-color ease .5s;
 
                 &__illustration {
                     max-width: 40%;
@@ -166,7 +169,28 @@ body {
 
                     a {
                         color: var(--red-color);
+                        font-weight: 500;
                         text-decoration: none;
+                        position: relative;
+                        transition: all .3s;
+        
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            bottom: 0px;
+                            width: 0%;
+                            left: 0px;
+                            height: 2px;
+                            transition: width ease .3s;
+                            background: var(--red-color);                    
+                        }
+
+                        &:hover {
+                            &::after {
+                                width: 100%;
+                            }
+                        }
                     }
                 }
 
@@ -178,8 +202,8 @@ body {
                     }
                 }
 
-                &:not(:last-of-type) {
-                    margin-bottom: 48px;
+                &:hover {
+                    background-color: var(--bg-color-light);
                 }
             }
         }

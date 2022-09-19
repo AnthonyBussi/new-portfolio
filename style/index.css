@@ -124,6 +124,9 @@ body main .projects .project {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 48px 24px;
+  background-color: var(--bg-color);
+  transition: background-color ease 0.5s;
 }
 body main .projects .project__illustration {
   max-width: 40%;
@@ -133,7 +136,24 @@ body main .projects .project__description p {
 }
 body main .projects .project__description a {
   color: var(--red-color);
+  font-weight: 500;
   text-decoration: none;
+  position: relative;
+  transition: all 0.3s;
+}
+body main .projects .project__description a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  width: 0%;
+  left: 0px;
+  height: 2px;
+  transition: width ease 0.3s;
+  background: var(--red-color);
+}
+body main .projects .project__description a:hover::after {
+  width: 100%;
 }
 body main .projects .project:nth-child(odd) {
   flex-direction: row-reverse;
@@ -141,8 +161,8 @@ body main .projects .project:nth-child(odd) {
 body main .projects .project:nth-child(odd) .project__description {
   text-align: right;
 }
-body main .projects .project:not(:last-of-type) {
-  margin-bottom: 48px;
+body main .projects .project:hover {
+  background-color: var(--bg-color-light);
 }
 body main .contact h3 {
   text-align: center;

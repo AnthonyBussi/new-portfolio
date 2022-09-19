@@ -149,9 +149,40 @@ body {
             }
         }
 
-        // .projects {
+        .projects {
+            .project {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
 
-        // }
+                &__illustration {
+                    max-width: 40%;
+                }
+
+                &__description {
+                    p {
+                        margin-bottom: 12px;
+                    }
+
+                    a {
+                        color: var(--red-color);
+                        text-decoration: none;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    flex-direction: row-reverse;
+
+                    .project__description {
+                        text-align: right;
+                    }
+                }
+
+                &:not(:last-of-type) {
+                    margin-bottom: 48px;
+                }
+            }
+        }
 
         .contact {
             h3 {

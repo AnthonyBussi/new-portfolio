@@ -120,6 +120,30 @@ body main .skills__soft-skills {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+body main .projects .project {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+body main .projects .project__illustration {
+  max-width: 40%;
+}
+body main .projects .project__description p {
+  margin-bottom: 12px;
+}
+body main .projects .project__description a {
+  color: var(--red-color);
+  text-decoration: none;
+}
+body main .projects .project:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+body main .projects .project:nth-child(odd) .project__description {
+  text-align: right;
+}
+body main .projects .project:not(:last-of-type) {
+  margin-bottom: 48px;
+}
 body main .contact h3 {
   text-align: center;
   margin-bottom: 48px;

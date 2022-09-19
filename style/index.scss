@@ -6,6 +6,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-family);
+    overflow-x: hidden;
 
     header {
         height: 85px;
@@ -100,17 +101,51 @@ body {
 
         .skills {
 
+            .skill {
+                min-width: calc(100% / 5);
+                text-align: center;
+                padding: 12px 6px;
+            }
+            
+
             &__technical-skills{
-                width: 100%;
+                margin-bottom: 24px;
                 display: flex;
-                justify-content: space-around;
-                margin: 48px 0;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                > div {
+                    &:not(:nth-child(3)) {
+                        border-bottom: 1px solid var(--red-color);
+                    }
+                }
+
+                .advanced, .intermediate, .beginner {
+                    width: 60%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    flex-direction: column;
+                    margin-bottom: 24px;
+                    padding-bottom: 24px;
+                }
+
+                .advanced-skills, .intermediate-skills, .beginner-skills {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                }
             }
 
             &__soft-skills {
-                width: 100%;
+                width: 60%;
+                margin: auto;
                 display: flex;
                 justify-content: space-around;
+                flex-wrap: wrap;
             }
         }
 

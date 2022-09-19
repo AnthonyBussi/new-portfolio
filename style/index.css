@@ -6,6 +6,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-family);
+  overflow-x: hidden;
 }
 body header {
   height: 85px;
@@ -81,16 +82,43 @@ body main .home__subtitle p {
   font-size: 4em;
   font-weight: 300;
 }
+body main .skills .skill {
+  min-width: 20%;
+  text-align: center;
+  padding: 12px 6px;
+}
 body main .skills__technical-skills {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body main .skills__technical-skills > div:not(:nth-child(3)) {
+  border-bottom: 1px solid var(--red-color);
+}
+body main .skills__technical-skills .advanced, body main .skills__technical-skills .intermediate, body main .skills__technical-skills .beginner {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+body main .skills__technical-skills .advanced-skills, body main .skills__technical-skills .intermediate-skills, body main .skills__technical-skills .beginner-skills {
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-around;
-  margin: 48px 0;
+  flex-wrap: wrap;
 }
 body main .skills__soft-skills {
-  width: 100%;
+  width: 60%;
+  margin: auto;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 body main .contact h3 {
   text-align: center;

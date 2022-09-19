@@ -68,7 +68,7 @@ body main .home {
 body main .home__title h1 {
   font-weight: 400;
   margin-bottom: 24px;
-  font-size: 7em;
+  font-size: 4em;
 }
 body main .home__title h1 span {
   color: var(--red-color);
@@ -79,7 +79,7 @@ body main .home__subtitle {
   text-align: end;
 }
 body main .home__subtitle p {
-  font-size: 4em;
+  font-size: 2em;
   font-weight: 300;
 }
 body main .skills .skill {

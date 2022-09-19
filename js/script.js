@@ -22,3 +22,18 @@
 
 //     }
 // })
+
+let homeDiv = document.querySelector('#home');
+let skillsDiv = document.querySelector('#skills');
+let projectsDiv = document.querySelector('#projects');
+let contactDiv = document.querySelector('#contact');
+
+let screenWidth = screen.width;
+
+if(screenWidth < 1024) {
+    skillsDiv.classList.remove("red-circle");
+    projectsDiv.classList.remove("blue-circle");
+    contactDiv.classList.remove("red-circle");
+}
+
+console.log(screenWidth);

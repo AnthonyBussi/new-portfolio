@@ -6,21 +6,22 @@ let contactDiv = document.querySelector('#contact');
 let burgerContainer = document.querySelector("#burger-container");
 
 //fonction pour afficher ou non les cercles rouge et bleu
-function displayCircle() {
-    let screenWidth = screen.width;
+// function displayCircle() {
+//     let screenWidth = screen.width;
 
-    if(screenWidth < 1024) {
-        skillsDiv.classList.remove("red-circle");
-        projectsDiv.classList.remove("blue-circle");
-        contactDiv.classList.remove("red-circle");
+//     if(screenWidth < 1024) {
+//         skillsDiv.classList.remove("red-circle");
+//         projectsDiv.classList.remove("blue-circle");
+//         contactDiv.classList.remove("red-circle");
         
-        console.log(screenWidth);
-    } else {
-        skillsDiv.classList.add("red-circle");
-        projectsDiv.classList.add("blue-circle");
-        contactDiv.classList.add("red-circle");        
-    }
-}
+//         console.log(screenWidth);
+//     } else {
+//         skillsDiv.classList.add("red-circle");
+//         projectsDiv.classList.add("blue-circle");
+//         contactDiv.classList.add("red-circle");        
+//     }
+// }
+// window.addEventListener("resize", displayCircle);
 
 function showBurgerMenu() {
     let burgerOpener = document.querySelector("#burger-opener");
@@ -30,7 +31,6 @@ function showBurgerMenu() {
     mobileLinks.classList.toggle("open")
 }
 
-window.addEventListener("resize", displayCircle);
 burgerContainer.addEventListener("click", showBurgerMenu);
 
 

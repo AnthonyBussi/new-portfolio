@@ -59,7 +59,13 @@ body header nav a:hover {
 body header nav a:hover::after {
   width: 100%;
 }
+@media (max-width: 768px) {
+  body header nav {
+    display: none;
+  }
+}
 body header .menu-mobile {
+  display: none;
   position: relative;
 }
 body header .menu-mobile .burger-opener {
@@ -96,24 +102,29 @@ body header .menu-mobile .burger-opener.open::after {
   transform: rotate(-45deg);
   top: 0;
 }
-body header .menu-mobile ul {
+@media (max-width: 768px) {
+  body header .menu-mobile {
+    display: block;
+  }
+}
+body header ul {
   background: var(--text-color);
   position: absolute;
-  width: 100%;
-  left: 0;
-  top: 100%;
+  width: 150px;
+  right: 0;
+  top: 30px;
   transform: scaleY(0);
   transform-origin: center top;
   transition: all 0.3s ease;
 }
-body header .menu-mobile ul.open {
+body header ul.open {
   transform: scaleY(1);
 }
-body header .menu-mobile ul li {
+body header ul li {
   text-align: center;
   padding: 10px;
 }
-body header .menu-mobile ul li a {
+body header ul li a {
   text-decoration: none;
   color: var(--bg-color);
 }
@@ -122,6 +133,7 @@ body main .home {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
 }
 body main .home__title h1 {
   font-weight: 400;
@@ -133,12 +145,44 @@ body main .home__title h1 span {
   text-transform: uppercase;
   font-weight: 700;
 }
+@media (max-width: 660px) {
+  body main .home__title h1 {
+    font-size: 3em;
+  }
+}
+@media (max-width: 480px) {
+  body main .home__title h1 {
+    font-size: 2em;
+  }
+}
 body main .home__subtitle {
   text-align: end;
 }
 body main .home__subtitle p {
   font-size: 2em;
   font-weight: 300;
+}
+@media (max-width: 660px) {
+  body main .home__subtitle p {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 480px) {
+  body main .home__subtitle p {
+    text-align: center;
+    font-size: 1.4em;
+  }
+}
+body main .home__picture {
+  max-width: 45%;
+}
+body main .home__picture img {
+  max-width: 100%;
+}
+@media (max-width: 1024px) {
+  body main .home {
+    flex-direction: column;
+  }
 }
 body main .skills .skill {
   min-width: 20%;

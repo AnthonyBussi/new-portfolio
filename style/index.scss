@@ -65,10 +65,14 @@ body {
                     }
                 }
             }
+
+            @media (max-width: 768px) {
+                display: none;                
+            }
         }
 
         .menu-mobile {
-            // display: none;
+            display: none;
             position: relative;
 
             .burger-opener {
@@ -99,7 +103,7 @@ body {
                 }
                 
                 &.open {
-                    background:transparent;
+                    background: transparent;
     
                     &::before {
                         transform: rotate(45deg);
@@ -112,28 +116,32 @@ body {
                 }
             }
 
-            ul {
-                background: var(--text-color);
-                position: absolute;
-                width: 100%;
-                left: 0;
-                top: 100%;
-                transform: scaleY(0);
-                transform-origin: center top;
-                transition: all .3s ease;
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
 
-                &.open {
-                    transform: scaleY(1);
-                }
+        ul {
+            background: var(--text-color);
+            position: absolute;
+            width: 150px;
+            right: 0;
+            top: 30px;
+            transform: scaleY(0);
+            transform-origin: center top;
+            transition: all .3s ease;
 
-                li {
-                    text-align: center;
-                    padding: 10px;
+            &.open {
+                transform: scaleY(1);
+            }
 
-                    a {
-                        text-decoration: none;
-                        color: var(--bg-color);
-                    }
+            li {
+                text-align: center;
+                padding: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: var(--bg-color);
                 }
             }
         }
@@ -145,6 +153,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-around;
+            width: 100%;
 
             &__title {
                 h1 {
@@ -157,6 +166,14 @@ body {
                         text-transform: uppercase;
                         font-weight: 700;
                     }
+
+                    @media (max-width: 660px) {
+                        font-size: 3em;
+                    }
+
+                    @media (max-width: 480px) {
+                        font-size: 2em;
+                    }
                 }
             }
 
@@ -166,7 +183,27 @@ body {
                 p {
                     font-size: 2em;
                     font-weight: 300;
+
+                    @media (max-width: 660px) {
+                        font-size: 1.5em;
+                    }
+
+                    @media (max-width: 480px) {
+                        text-align: center;
+                        font-size: 1.4em;
+                    }
                 }
+            }
+
+            &__picture {
+                max-width: 45%;
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            @media (max-width: 1024px) {
+                flex-direction: column;
             }
         }
 

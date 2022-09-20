@@ -3,10 +3,12 @@ let skillsDiv = document.querySelector('#skills');
 let projectsDiv = document.querySelector('#projects');
 let contactDiv = document.querySelector('#contact');
 
+let burgerContainer = document.querySelector("#burger-container");
+
 //fonction pour afficher ou non les cercles rouge et bleu
 function displayCircle() {
     let screenWidth = screen.width;
-    
+
     if(screenWidth < 1024) {
         skillsDiv.classList.remove("red-circle");
         projectsDiv.classList.remove("blue-circle");
@@ -20,8 +22,18 @@ function displayCircle() {
     }
 }
 
+function showBurgerMenu() {
+    let burgerOpener = document.querySelector("#burger-opener");
+    let mobileLinks = document.querySelector("#mobile-links");
+
+    burgerOpener.classList.toggle("open");
+    mobileLinks.classList.toggle("open")
+}
 
 window.addEventListener("resize", displayCircle);
+burgerContainer.addEventListener("click", showBurgerMenu);
+
+
 
 // // let skillsDivPosition = skillsDiv.getBoundingClientRect();
 // let skillsDivPosition = skillsDiv.offsetTop;

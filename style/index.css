@@ -59,6 +59,64 @@ body header nav a:hover {
 body header nav a:hover::after {
   width: 100%;
 }
+body header .menu-mobile {
+  position: relative;
+}
+body header .menu-mobile .burger-opener {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background: var(--text-color);
+  position: relative;
+}
+body header .menu-mobile .burger-opener::before, body header .menu-mobile .burger-opener::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  display: inline-block;
+  position: absolute;
+  background: var(--red-color);
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+body header .menu-mobile .burger-opener::before {
+  top: -7px;
+}
+body header .menu-mobile .burger-opener::after {
+  top: 7px;
+}
+body header .menu-mobile .burger-opener.open {
+  background: transparent;
+}
+body header .menu-mobile .burger-opener.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+body header .menu-mobile .burger-opener.open::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+body header .menu-mobile ul {
+  background: var(--text-color);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  transform: scaleY(0);
+  transform-origin: center top;
+  transition: all 0.3s ease;
+}
+body header .menu-mobile ul.open {
+  transform: scaleY(1);
+}
+body header .menu-mobile ul li {
+  text-align: center;
+  padding: 10px;
+}
+body header .menu-mobile ul li a {
+  text-decoration: none;
+  color: var(--bg-color);
+}
 body main .home {
   padding: 72px 0;
   display: flex;

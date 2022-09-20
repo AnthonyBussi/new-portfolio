@@ -281,6 +281,7 @@ body {
                 &__description {
                     p {
                         margin-bottom: 12px;
+                        line-height: 1.4;
                     }
 
                     a {
@@ -308,18 +309,32 @@ body {
                             }
                         }
                     }
+
+                    @media (max-width: 1024px) {
+                        padding: 24px;
+                    }
                 }
 
                 &:nth-child(odd) {
                     flex-direction: row-reverse;
 
                     .project__description {
-                        text-align: right;
+                        text-align: center;
+                    }
+
+                    @media (max-width: 1024px) {
+                        flex-direction: column;
                     }
                 }
 
                 &:hover {
                     background-color: var(--bg-color-light);
+                }
+
+                @media (max-width: 1024px) {
+                    padding: 24px;
+                    flex-direction: column;
+                    text-align: center;
                 }
             }
         }

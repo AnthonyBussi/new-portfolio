@@ -11,6 +11,11 @@
   max-width: 90%;
   margin: auto;
 }
+@media (max-width: 660px) {
+  .container {
+    max-width: 100%;
+  }
+}
 
 .red-circle {
   position: relative;

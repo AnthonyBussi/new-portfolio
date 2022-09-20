@@ -241,6 +241,7 @@ body main .projects .project__illustration {
 }
 body main .projects .project__description p {
   margin-bottom: 12px;
+  line-height: 1.4;
 }
 body main .projects .project__description a {
   color: var(--red-color);
@@ -263,14 +264,31 @@ body main .projects .project__description a::after {
 body main .projects .project__description a:hover::after {
   width: 100%;
 }
+@media (max-width: 1024px) {
+  body main .projects .project__description {
+    padding: 24px;
+  }
+}
 body main .projects .project:nth-child(odd) {
   flex-direction: row-reverse;
 }
 body main .projects .project:nth-child(odd) .project__description {
-  text-align: right;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  body main .projects .project:nth-child(odd) {
+    flex-direction: column;
+  }
 }
 body main .projects .project:hover {
   background-color: var(--bg-color-light);
+}
+@media (max-width: 1024px) {
+  body main .projects .project {
+    padding: 24px;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 body main .contact h3 {
   text-align: center;

@@ -15,6 +15,11 @@ body {
         align-items: center;
         color: #fff;
 
+        &.container {
+            max-width: 90%;
+            margin: auto;
+        }
+
         > span {
             color: var(--red-color);
             font-weight: 700;

@@ -15,6 +15,10 @@ body header {
   align-items: center;
   color: #fff;
 }
+body header.container {
+  max-width: 90%;
+  margin: auto;
+}
 body header > span {
   color: var(--red-color);
   font-weight: 700;

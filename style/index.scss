@@ -15,10 +15,14 @@ body {
         align-items: center;
         color: #fff;
 
-        span {
+        > span {
             color: var(--red-color);
             font-weight: 700;
             font-size: 1.2em;
+
+            @media (max-width: 768px) {
+                display: none;                
+            }
         }
 
         nav {
@@ -80,13 +84,14 @@ body {
                 width: 30px;
                 height: 2px;
                 background: var(--text-color);
-                // color: var(--text-color);
                 position: relative;
+                top: 35px;
+                z-index: 2;
     
                 &::before, &::after {
                     content: "";
-                    width:30px;
-                    height:2px;
+                    width: 30px;
+                    height: 2px;
                     display: inline-block;
                     position: absolute;
                     background: var(--red-color);
@@ -107,11 +112,13 @@ body {
     
                     &::before {
                         transform: rotate(45deg);
-                        top:0;
+                        top: 0;
+                        height: 4px;
                     }
                     &::after {
                         transform: rotate(-45deg);
-                        top:0;
+                        top: 0;
+                        height: 4px;
                     }
                 }
             }
@@ -124,11 +131,12 @@ body {
         ul {
             background: var(--text-color);
             position: absolute;
-            width: 150px;
+            width: 100%;
             right: 0;
-            top: 30px;
+            top: 0;
             transform: scaleY(0);
             transform-origin: center top;
+            z-index: 1;
             transition: all .3s ease;
 
             &.open {
@@ -137,7 +145,7 @@ body {
 
             li {
                 text-align: center;
-                padding: 10px;
+                padding: 12px;
 
                 a {
                     text-decoration: none;

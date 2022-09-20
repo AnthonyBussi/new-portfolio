@@ -15,10 +15,15 @@ body header {
   align-items: center;
   color: #fff;
 }
-body header span {
+body header > span {
   color: var(--red-color);
   font-weight: 700;
   font-size: 1.2em;
+}
+@media (max-width: 768px) {
+  body header > span {
+    display: none;
+  }
 }
 body header nav {
   display: flex;
@@ -74,6 +79,8 @@ body header .menu-mobile .burger-opener {
   height: 2px;
   background: var(--text-color);
   position: relative;
+  top: 35px;
+  z-index: 2;
 }
 body header .menu-mobile .burger-opener::before, body header .menu-mobile .burger-opener::after {
   content: "";
@@ -97,10 +104,12 @@ body header .menu-mobile .burger-opener.open {
 body header .menu-mobile .burger-opener.open::before {
   transform: rotate(45deg);
   top: 0;
+  height: 4px;
 }
 body header .menu-mobile .burger-opener.open::after {
   transform: rotate(-45deg);
   top: 0;
+  height: 4px;
 }
 @media (max-width: 768px) {
   body header .menu-mobile {
@@ -110,11 +119,12 @@ body header .menu-mobile .burger-opener.open::after {
 body header ul {
   background: var(--text-color);
   position: absolute;
-  width: 150px;
+  width: 100%;
   right: 0;
-  top: 30px;
+  top: 0;
   transform: scaleY(0);
   transform-origin: center top;
+  z-index: 1;
   transition: all 0.3s ease;
 }
 body header ul.open {
@@ -122,7 +132,7 @@ body header ul.open {
 }
 body header ul li {
   text-align: center;
-  padding: 10px;
+  padding: 12px;
 }
 body header ul li a {
   text-decoration: none;

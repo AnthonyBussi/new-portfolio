@@ -79,8 +79,11 @@ section {
     padding: 48px;
     font-size: 1.2em;
 
-    @media (max-width: 1024px) {
-        padding-bottom: 0;
+    &:not(:last-of-type) {
+
+        @media (max-width: 1024px) {
+            padding-bottom: 0;
+        }
     }
 }
 

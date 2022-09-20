@@ -76,7 +76,7 @@ section {
   font-size: 1.2em;
 }
 @media (max-width: 1024px) {
-  section {
+  section:not(:last-of-type) {
     padding-bottom: 0;
   }
 }

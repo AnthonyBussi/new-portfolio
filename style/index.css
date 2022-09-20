@@ -182,6 +182,7 @@ body main .home__picture img {
 @media (max-width: 1024px) {
   body main .home {
     flex-direction: column;
+    padding-bottom: 0;
   }
 }
 body main .skills .skill {
@@ -214,6 +215,11 @@ body main .skills__technical-skills .advanced-skills, body main .skills__technic
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+@media (max-width: 1024px) {
+  body main .skills__technical-skills .beginner {
+    margin-bottom: 0;
+  }
 }
 body main .skills__soft-skills {
   width: 60%;

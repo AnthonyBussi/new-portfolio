@@ -204,6 +204,7 @@ body {
 
             @media (max-width: 1024px) {
                 flex-direction: column;
+                padding-bottom: 0;
             }
         }
 
@@ -245,6 +246,13 @@ body {
                     align-items: center;
                     justify-content: space-around;
                     flex-wrap: wrap;
+                }
+                
+
+                @media (max-width: 1024px) {
+                    .beginner {
+                        margin-bottom: 0;
+                    }
                 }
             }
 

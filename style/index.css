@@ -239,6 +239,11 @@ body main .projects .project {
 body main .projects .project__illustration {
   max-width: 40%;
 }
+@media (max-width: 1024px) {
+  body main .projects .project__illustration {
+    max-width: 100%;
+  }
+}
 body main .projects .project__description p {
   margin-bottom: 12px;
   line-height: 1.4;

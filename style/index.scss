@@ -276,6 +276,10 @@ body {
 
                 &__illustration {
                     max-width: 40%;
+
+                    @media (max-width: 1024px) {
+                        max-width: 100%;
+                    }
                 }
 
                 &__description {

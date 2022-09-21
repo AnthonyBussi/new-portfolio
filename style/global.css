@@ -18,6 +18,7 @@
 }
 
 .red-circle {
+  padding-left: 80px;
   position: relative;
 }
 .red-circle::before {
@@ -61,6 +62,7 @@
   position: absolute;
   right: -200px;
   top: -150px;
+  z-index: -1;
 }
 @media (max-width: 1024px) {
   .blue-circle {

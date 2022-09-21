@@ -50,6 +50,7 @@
 }
 
 .blue-circle {
+  padding-right: 100px;
   position: relative;
 }
 .blue-circle::before {
@@ -143,4 +144,15 @@ h3 {
 h4 {
   font-size: 1.2em;
   margin-bottom: 12px;
+}
+
+.reveal-loaded .hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal-loaded .visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.8s cubic-bezier(0.5, 0, 0, 1);
 }/*# sourceMappingURL=global.css.map */

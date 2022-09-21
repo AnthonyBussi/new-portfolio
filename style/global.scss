@@ -51,7 +51,7 @@
 }
 
 .blue-circle {
-    // padding-right: 200px;
+    padding-right: 100px;
     position: relative;
 
     &::before {
@@ -147,13 +147,24 @@ h4 {
     margin-bottom: 12px;
 }
 
-// .hidden {
-//     opacity: 0;
-//     transform: translateX(-30px);
-// }
+.reveal-loaded .hidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
 
-// .visible {
-//     opacity: 1;
-//     transform: translateY(0);
-//     transition: 1s;
+.reveal-loaded .visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: .8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+// .reveal{
+//     opacity: 0;
+//     transform: translateY(-30px);
+
+//     &__visible {
+//         opacity: 1;
+//         transform: translateY(0);
+//         transition: .8s cubic-bezier(0.5, 0, 0, 1);
+//     }
 // }

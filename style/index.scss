@@ -287,7 +287,7 @@ body {
                 justify-content: space-around;
                 padding: 48px 24px;
                 background-color: var(--bg-color);
-                transition: background-color ease .5s;
+                // transition: background-color ease .5s;
 
                 &__illustration {
                     max-width: 40%;
@@ -348,6 +348,7 @@ body {
 
                 &:hover {
                     background-color: var(--bg-color-light);
+                    transition: background-color ease .5s;
                 }
 
                 @media (max-width: 1024px) {

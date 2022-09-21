@@ -14,3 +14,31 @@ function showBurgerMenu() {
 }
 
 burgerContainer.addEventListener("click", showBurgerMenu);
+
+
+
+const ratio = .3;
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: ratio
+}
+
+const handleIntersect = function(entries, observer) {
+    entries.forEach(function (entry) {
+        if(entry.intersectionRatio > ratio) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        }
+    })
+}
+  
+
+document.documentElement.classList.add('reveal-loaded');
+
+const observer = new IntersectionObserver(handleIntersect, options);
+
+let projects = document.querySelectorAll(".hidden");
+projects.forEach(function (r) {
+    observer.observe(r);
+})
